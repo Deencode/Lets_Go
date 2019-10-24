@@ -19,7 +19,7 @@ func main() {
 
 	//查看变量类型
 	fmt.Printf("i1的数据类型是%T\n", i1)
-	i1 := int8(110)
+	i1 := int8(110) //要赋值int8类型 必须这样赋值
 	fmt.Printf("i1的数据类型是%T\n", i1)
 }
 
