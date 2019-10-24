@@ -16,4 +16,17 @@ func main() {
 	fmt.Printf("i1的二进制进制是=%b\n", i1)
 	fmt.Printf("i1的八进制进制是=%o\n", i1)
 	fmt.Printf("i1的十六进制进制是=%x\n", i1)
+
+	//查看变量类型
+	fmt.Printf("i1的数据类型是%T\n", i1)
+	i1 := int8(110)
+	fmt.Printf("i1的数据类型是%T\n", i1)
 }
+
+// [Running] go run "/Users/ding/Documents/GO_CODE_DEV/src/Lets_Go/lets_03_decimal/main.go"
+// i1的十进制是=101
+// i1的二进制进制是=1100101
+// i1的八进制进制是=145
+// i1的十六进制进制是=65
+// i1的数据类型是int
+// i1的数据类型是int8
