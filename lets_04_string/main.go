@@ -48,9 +48,15 @@ func main() {
 	fmt.Println(strings.HasSuffix(url, "com"))
 	//判断子串出现的位置
 	fmt.Println(strings.Index(url, "google"))
+	//找出com最后一次出现的位置
+	fmt.Println(strings.LastIndex(url, "com"))
+	fmt.Printf("com最后出现的位置:%d", strings.LastIndex(url, "google"))
 	tack := "www.tencent.com"
 	for _, c := range tack {
 		fmt.Printf("%c\n", c)
 	}
-
+	//同样达到单个输出字符的效果
+	for i := 0; i < len(tack); i++ {
+		fmt.Printf("%c\n", tack[i])
+	}
 }
