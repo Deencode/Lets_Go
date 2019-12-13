@@ -59,4 +59,7 @@ func main() {
 	for i := 0; i < len(tack); i++ {
 		fmt.Printf("%c\n", tack[i])
 	}
+
+	v3 := '中'
+	fmt.Printf("%T,%d,%c,%q", v3, v3, v3, v3)
 }
