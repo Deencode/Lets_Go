@@ -12,9 +12,11 @@ func main() {
 	fmt.Printf("float64最大值%v\n", math.MaxFloat64)
 	fmt.Printf("float32最小值%v\n", math.MaxFloat32)
 	f1 := float32(0.32)
-	fmt.Printf("f1 value = %v 类型是:%T", f1, f1)
+	fmt.Printf("f1 value = %v 类型是:%T\n", f1, f1)
 	//f2 = f1 在go语言中的float32不能直接赋值给float64
-
+	f2 := float64(0.32) + 1 //类型转发只针对已经声明的变量类型的变量
+	//直接写的常数是不需要手动转型的 go会自动转型
+	fmt.Println(f2)
 }
 
 // float64最大值1.7976931348623157e+308
