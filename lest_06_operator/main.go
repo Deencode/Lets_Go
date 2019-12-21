@@ -1,3 +1,12 @@
+/*
+ * @Author: BinScholl
+ * @Date: 2019-12-13 20:38:08
+ * @LastEditors: BinScholl
+ * @LastEditTime: 2019-12-21 19:47:48
+ * @Description: go语言中的运算符 加减乘除法 取余
+ * @Github: https://github.com/BinScholl
+ */
+
 package main
 
 import "fmt"
@@ -33,7 +42,11 @@ func main() {
 	fmt.Println(sub(1))
 }
 
-//一个数加加
+/**
+ * @description: 一个数加加
+ * @param int64 number
+ * @return: number add sum
+ */
 func add(num int64) (sum int64) {
 	num++
 	return num
