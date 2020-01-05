@@ -1,3 +1,11 @@
+<!--
+ * @Author: BinScholl
+ * @Date: 2020-01-05 10:54:51
+ * @LastEditors  : BinScholl
+ * @LastEditTime : 2020-01-05 10:59:23
+ * @Description: 
+ * @Github: https://github.com/BinScholl
+ -->
 
 
 <p align="center">
@@ -15,7 +23,7 @@
 ### 🔝置顶通知❣️
 
 <p align="center">
-  本仓库是我👩‍💻个人使用业余时间学习<code>Go lang</code>自己整理的笔记和代码,希望帮助那些同样想学习<code>Go lang</code>的朋友,如果对你帮助别忘了帮忙点击右上方的<code>star✨</code>按钮一下本项目😜。
+  本仓库是我👩‍💻个人使用业余时间学习<code style='color:red;'>Go lang</code>自己整理的笔记和代码,希望帮助那些同样想学习<code style='color:red;'>Go lang</code>的朋友,如果对你帮助别忘了帮忙点击右上方的<code style='color:red;'>star✨</code>按钮一下本项目😜。
 </p>
 
 </br>
