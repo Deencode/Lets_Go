@@ -2,7 +2,7 @@
  * @Author: BinScholl
  * @Date: 2019-12-13 20:38:08
  * @LastEditors  : BinScholl
- * @LastEditTime : 2020-01-05 18:18:40
+ * @LastEditTime : 2020-01-06 13:36:39
  * @Description: go语言中的运算符 加减乘除法 取余
  * @Github: https://github.com/BinScholl
  */
@@ -109,6 +109,7 @@ func main() {
 	fmt.Println(5 >> 2) //5的二进制是101  右移2位 1|01 (|代表界限)然后去掉移除的2位 就是1
 	/*
 		5. << :左移  (<< 箭头后代表是左移多少位)
+		左移 几位就是在101后面补零
 	*/
 	fmt.Println(5 << 2) //5的二进制是101 左移2位   10100| (|代表界限)然后去掉移除的2位 就是10 1的二进制就是20
 }
