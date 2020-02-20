@@ -40,7 +40,9 @@ func main() {
 	//比较方便的声明方式  ’...‘代表你不确定这个数组有几个元素位 让go语言自己去推断
 	isGood := [...]bool{true, false, true}
 	fmt.Println(isGood)
-	//没有初始化 数组会有默认值
+	//通过len函数来输出isGood数组里面有多少给元素
+	fmt.Println(len(isGood))
+	//没有初始化 数组会有默认值  前3个元素赋值了 后面2个没有赋值就有默认值
 	nums := [5]int{1, 2, 3}
 	fmt.Println(nums)
 	status := [3]bool{true}
@@ -52,11 +54,36 @@ func main() {
 		[2]int{2, 2},
 		[2]int{3, 2},
 	}
+	fmt.Println("方法二")
+	//多维数组遍历 方式一
+	for in, v1 := range n {
+		fmt.Println("n[", in, "] = ", v1)
+		for index, v2 := range v1 {
+			fmt.Println("n[", in, "] [", index, "]= ", v2)
+		}
+	}
+	fmt.Println("方法二")
+	//多维数组遍历 方法二
+	for i := 0; i < len(n); i++ { //先遍历第一层的元素
+		fmt.Println("n[", i, "] = ", n[i])
+		for u := 0; u < len(n[i]); u++ { //第一层元素里面是2个元素 所以继续遍历第二层的
+			fmt.Println("n[", i, "] [", u, "]= ", n[i][u])
+		}
+	}
 	fmt.Println(n)
 	//访问n数组中的第二个元素里面的第二个元素
-	fmt.Println(n[1][1]) //2
+	fmt.Println(n[0][0]) //1
+	fmt.Println(n[0][1]) //2
 	fmt.Println()
 	//通过下标去赋值 格式:下标:值
 	floats := [10]float64{1: 1, 9: 9}
 	fmt.Println(floats)
+	//数组的长度是数组类型的一部分
+	var array1 [3]int16
+	var array2 [2]int16
+	fmt.Printf("array1 : %T | array2 : %T\n", array1, array2)
+	//fmt.Println(array1 == array2)数组类型不一样无法进行比较   因为在go语言中数组的长度是数组类型的一部分
+	array3 := [2]int8{1, 2}
+	array4 := [2]int8{1, 2}
+	fmt.Println(array3 == array4)
 }
