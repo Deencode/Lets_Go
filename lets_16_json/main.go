@@ -18,8 +18,28 @@ type student struct {
 }
 
 func main() {
-	HttpServer()
+	s1 := student{
+		person{
+			"宁宁",
+			18,
+		},
+		"5班",
+		"Golang",
+	}
+	fmt.Println("s1 = ", s1)
+	jsonS, err := json.Marshal(s1)
+	if err != nil {
+		fmt.Println(string(jsonS))
+	}
+	fmt.Println(string(jsonS))
 
+	//json反序列化
+	var s2 student
+	str := `{"Name":"宁宁","Age":18,"Class":"5班","Learning":"Golang"}`
+	json.Unmarshal([]byte(str),&s2)
+	//json([]byte(str), &s2) //反序列化传入指针 go里面的方法改的是副本
+	fmt.Println("s2 = ", s2)
+	//HttpServer()
 }
 
 func HttpServer() {

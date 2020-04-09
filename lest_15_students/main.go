@@ -12,8 +12,8 @@ import (
 
 //查看 新增 删除 学生
 type student struct {
-	Id   int64
-	Name string
+	Id   int64  `json:"students_id"` //tage 标签 就是通过序列化之后的json数据的字段名
+	Name string `json:"students_name"`
 }
 
 var (
