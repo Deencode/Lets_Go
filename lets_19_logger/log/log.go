@@ -4,6 +4,12 @@ import (
 	"os"
 )
 
+const (
+	INFO  = "[INFO]:"
+	ERROR = "[Error]:"
+	DeBug = "[DeBug]:"
+)
+
 type Logger interface {
 	Info(msg string)
 	Error(msg string)
@@ -16,14 +22,16 @@ type Flog struct {
 }
 
 func (f Flog) Info(msg string) {
-	OpenWriter(f).WriteString("[INFO]:" + msg + "\n")
+	//写入日志 info模式
+	out(f, msg, INFO)
 }
+
 func (f Flog) Error(msg string) {
-	OpenWriter(f).WriteString("[ERROR]:" + msg + "\n")
+	out(f, msg, ERROR)
 }
 
 func (f Flog) DeBug(msg string) {
-	OpenWriter(f).WriteString("[DeBug]:" + msg + "\n")
+	out(f, msg, DeBug)
 }
 
 //console控制台log
@@ -31,13 +39,13 @@ type Clog struct {
 }
 
 func (c Clog) Info(msg string) {
-	os.Stdout.WriteString("[INFO]:" + msg + "\n")
+	os.Stdout.WriteString(INFO + msg + "\n")
 }
 func (c Clog) Error(msg string) {
-	os.Stdout.WriteString("[Error]:" + msg + "\n")
+	os.Stdout.WriteString(ERROR + msg + "\n")
 }
 func (c Clog) DeBug(msg string) {
-	os.Stdout.WriteString("[INFO]:" + msg + "\n")
+	os.Stdout.WriteString(DeBug + msg + "\n")
 }
 
 func NewFlog(file string) Logger {
@@ -49,11 +57,21 @@ func NewClog() Logger {
 	logger := Logger(&Clog{})
 	return logger
 }
+
+/*
+	打开目标文件
+*/
 func OpenWriter(f Flog) *os.File {
 	file, err := os.OpenFile(f.FilePath, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0644)
-	defer file.Close()
 	if err != nil {
 		panic("日志输出错误...")
 	}
 	return file
+}
+
+//操作输出内容
+func out(f Flog, msg string, model string) {
+	file := OpenWriter(f)
+	file.WriteString(INFO + msg + "\n")
+	file.Close()
 }
