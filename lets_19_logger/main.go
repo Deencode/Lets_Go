@@ -18,14 +18,14 @@ func test1() {
 	//fmt.Printf("%T",logs)
 	logs.Info("测试info")
 	logs.DeBug("测试Debug")
-	logs.Error("测试错误")
+	logs.Error("测试错误121212121")
 }
 func test2() {
 	logs := log.NewClog()
 	//fmt.Printf("%T",logs)
 	logs.Info("测试info")
 	logs.DeBug("测试Debug")
-	logs.Error("测试错误")
+	logs.Error("测试错误错误错误错误错误")
 }
 func test() {
 	f := &log.Flog{logPath}
