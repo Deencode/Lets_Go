@@ -9,7 +9,7 @@ import (
 )
 
 func worker(id int, jobs <-chan int, results chan<- int) {
-	for j := range jobs {
+	for j := range jobs { // jobs一被worker取走了了就没有了 worker只会取到下一个 所有不会冲突
 		fmt.Printf("worker:%d start job:%d\n", id, j)
 		//time.Sleep(time.Second)
 		fmt.Printf("worker:%d end job:%d\n", id, j)
