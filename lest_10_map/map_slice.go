@@ -7,6 +7,7 @@ func main() {
 	var citys []map[string]string
 	c1 := make(map[string]string, 1)
 	c1["上海"] = "中国大陆"
+	c1["北京"] = "中国大陆"
 	citys = append(citys, c1)
 	fmt.Println(c1)
 	c1 = make(map[string]string, 1)
