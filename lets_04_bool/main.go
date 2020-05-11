@@ -15,7 +15,7 @@ func main() {
 	fmt.Println(b2 == b3)
 }
 
-// [Running] go run "/Users/ding/Documents/GO_CODE_DEV/src/Lets_Go/lets_04_bool/main.go"
+// [Running] go run "/Users/ding/Documents/GO_CODE_DEV/src/Lets_Go/lets_04_bool/server.go"
 // false true false
 // true
 // false
