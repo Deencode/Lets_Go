@@ -23,7 +23,7 @@ func TestConnectionDB(t *testing.T) {
 	for name, tt := range testDB {
 		t.Run(name, func(t *testing.T) {
 			t.Log(func() string {
-				// 这里方法不通过 验证不出来 使用还是t.log()进行测试！
+
 				if _, err := ConnectionDB(tt.dbc); err != nil {
 					return tt.dbc.IPAddr + " 连接失败！！！"
 				}
