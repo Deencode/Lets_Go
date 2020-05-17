@@ -3,6 +3,18 @@
 // Author: SDing <deen.job@qq.com>
 // Date: 2020/5/17 - 3:22 下午
 
+/*
+create table user_assets
+(
+    id    int auto_increment
+        primary key,
+    name  varchar(20)   not null,
+    money int default 0 not null
+);
+INSERT INTO assets.user_assets (id, name, money) VALUES (1, '丁烁', 99970000);
+INSERT INTO assets.user_assets (id, name, money) VALUES (2, '岳宁宁', 20030000);
+*/
+
 // go语言中的数据库事务
 package main
 
