@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Redis实现排行榜</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .beta {
+            color: color("purple");
+        }
+    </style>
+</head>
+<body>
+
+<div class="container " style="text-align: center;margin-top: 20px">
+    <div class="row">
+        <div class=" col-3 rounded shadow p-3 mb-5 bg-white rounded">
+            <h3 class="text-danger">排行榜</h3>
+            <div class="card" >
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>🏅</span><span>第一名</span>
+                        <span class="badge badge-primary badge-pill">9</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>🥈</span><span>第二名</span>
+                        <span class="badge badge-primary badge-pill">7</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <span>🥉</span><span>第三名</span>
+                        <span class="badge badge-primary badge-pill">8</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div style="width: 5px;"></div>
+        <div class="col-8 rounded shadow p-3 mb-5 bg-white rounded " style="">
+            <h3 class="text-primary">具体送礼物区</h3>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="card" >
+                        <img class="card-img-top" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1589790107490&di=2d7bde662adb57ad326f6871f2efe170&imgtype=0&src=http%3A%2F%2F01.minipic.eastday.com%2F20170424%2F20170424110224_2976319ad50708e3ef72863260dd0536_4.jpeg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">测试用户1</h5>
+                            <p class="card-text">然后你喜欢的话可以点击下面按钮进行送礼物🎁打榜~.</p>
+                            <a href="#" class="btn btn-primary">Send Gift</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" >
+                        <img class="card-img-top" src="https://t1.hddhhn.com/uploads/tu/201810/415/055.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">测试用户2</h5>
+                            <p class="card-text">然后你喜欢的话可以点击下面按钮进行送礼物🎁打榜~.</p>
+                            <a href="#" class="btn btn-primary">Send Gift</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm">
+                    <div class="card" >
+                        <img class="card-img-top" src="https://t1.hddhhn.com/uploads/tu/201704/330/c1.jpg" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">测试用户3</h5>
+                            <p class="card-text">然后你喜欢的话可以点击下面按钮进行送礼物🎁打榜~.</p>
+                            <a href="#" class="btn btn-primary">Send Gift</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
