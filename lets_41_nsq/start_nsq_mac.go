@@ -8,6 +8,7 @@ package main
 import (
 	"fmt"
 	"os/exec"
+	"time"
 )
 
 func main() {
@@ -23,4 +24,5 @@ func main() {
 		fmt.Println("start nsqadmin")
 		exec.Command("bash", "-c", "nsqadmin -lookupd-http-address=127.0.0.1:4161")
 	}()
+	time.Sleep(99999999999)
 }
