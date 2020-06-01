@@ -17,6 +17,6 @@ func main() {
 		fmt.Println("connection tcp server fail.", err)
 	}
 	for i := 0; i < 10; i++ {
-		dial.Write([]byte("Hello" + time.Now().Format("2006-01-02 15:04:05.0000")))
+		dial.Write([]byte("Hello" + time.Now().Format("2006-01-02 15:04:05.0000") + "\n"))
 	}
 }

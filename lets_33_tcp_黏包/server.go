@@ -8,6 +8,7 @@ package main
 import (
 	"fmt"
 	"net"
+	"strings"
 )
 
 func main() {
@@ -23,6 +24,7 @@ func main() {
 			fmt.Println("tcp accept fail", err)
 			return
 		}
+		fmt.Println(strings.Split(accept.RemoteAddr().String(), ":")[1])
 		n, _ := accept.Read(msg[:])
 		fmt.Println(string(msg[:n]))
 	}

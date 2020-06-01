@@ -1,3 +1,5 @@
+// GO语言中的函数编程Example
+// http://github.com/higker/lets_go
 package main
 
 import "fmt"
