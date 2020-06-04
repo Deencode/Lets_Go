@@ -7,6 +7,7 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"net"
 	"time"
 )
@@ -16,7 +17,18 @@ func main() {
 	if err != nil {
 		fmt.Println("connection tcp server fail.", err)
 	}
-	for i := 0; i < 10; i++ {
-		dial.Write([]byte("Hello" + time.Now().Format("2006-01-02 15:04:05.0000") + "\n"))
+	var buffs [1024]byte
+
+	for dial != nil {
+		dial.Write([]byte("Hello !!" + time.Now().Format("2006-01-02 15:04:05.0000") + "\n"))
+		read, err := dial.Read(buffs[:])
+		fmt.Println(string(buffs[:read]))
+		if err == io.EOF {
+			fmt.Println("服务器已经关闭你的连接！！")
+			break
+		}
+		continue //停止当前的代码 去执行下一次的
+		time.Sleep(time.Second * 2)
 	}
+
 }

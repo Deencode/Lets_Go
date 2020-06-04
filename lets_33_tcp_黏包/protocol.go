@@ -18,6 +18,7 @@ func Encode(message string) ([]byte, error) {
 	// 创建缓冲区
 	var pkg = new(bytes.Buffer)
 	// 写入消息头 “小端方式写入存储”这里我也不太清楚看别人写的例子,用就完事了
+	// 前4个字节存储整条消息长度
 	err := binary.Write(pkg, binary.LittleEndian, length)
 	if err != nil {
 		return nil, err

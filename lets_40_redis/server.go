@@ -55,6 +55,7 @@ func init() {
 	for _, user := range userList {
 		rankList = append(rankList, redis.Z{Score: float64(user.Integral), Member: user.Name})
 	}
+	//parseUint, err := strconv.ParseUint("FF", 16, 8)
 	fmt.Println(rankList)
 	fmt.Println("ADD ZSET")
 	// 添加到redis db中
