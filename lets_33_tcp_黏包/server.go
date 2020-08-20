@@ -14,7 +14,7 @@ import (
 func main() {
 	listen, err := net.Listen("tcp", "localhost:9598")
 	if err != nil {
-		fmt.Println("create tcp server fail.", err)
+		fmt.Println("create tcp main fail.", err)
 		return
 	}
 	var msg [1024]byte

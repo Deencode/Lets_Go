@@ -21,7 +21,7 @@ func main() {
 		return
 	}
 	defer socket.Close()
-	sendData := []byte("Hello server")
+	sendData := []byte("Hello main")
 	_, err = socket.Write(sendData) // 发送数据
 	if err != nil {
 		fmt.Println("发送数据失败，err:", err)

@@ -15,11 +15,11 @@ import (
 func main() {
 	dial, err := net.Dial("tcp", "localhost:9598")
 	if err != nil {
-		fmt.Println("connection tcp server fail.", err)
+		fmt.Println("connection tcp main fail.", err)
 	}
 	var buffs [1024]byte
 
-	for  {
+	for {
 		dial.Write([]byte("Hello !!" + time.Now().Format("2006-01-02 15:04:05.0000") + "\n"))
 		read, err := dial.Read(buffs[:])
 		fmt.Println(string(buffs[:read]))

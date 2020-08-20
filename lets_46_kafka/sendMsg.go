@@ -10,8 +10,8 @@ import (
 )
 
 // GO连接kafka发送消息
-// ./kafka-server-start.sh -daemon ../config/server.properties
-// ./zookeeper-server-start.sh -daemon ../config/zookeeper.properties
+// ./kafka-main-start.sh -daemon ../config/main.properties
+// ./zookeeper-main-start.sh -daemon ../config/zookeeper.properties
 // 基于sarama第三方库开发的kafka client
 
 func main() {

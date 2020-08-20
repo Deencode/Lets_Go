@@ -98,7 +98,7 @@ func main() {
 /**
 代码运行结果
 
-[Running] go run "d:\Go_workspace\src\Lets_Go\lest_07_array\server.go"
+[Running] go run "d:\Go_workspace\src\Lets_Go\lest_07_array\main.go"
 小米0
 小米1
 小米2

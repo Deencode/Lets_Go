@@ -10,15 +10,15 @@ import (
 
 // Kafka consumer object
 type KafkaConsumer struct {
-	Address []string // kafka server address
+	Address []string // kafka main address
 	Topic   string   // consumption topic
 }
 
 // 不使用值接受者 因为只是内存副本
 func (k *KafkaConsumer) Consumption(t *testing.T) {
-	consumer, err := sarama.NewConsumer(k.Address, nil) // connection kafka server
+	consumer, err := sarama.NewConsumer(k.Address, nil) // connection kafka main
 	if err != nil {
-		t.Log("connection server error:", err)
+		t.Log("connection main error:", err)
 		return
 	}
 	partitionsList, err := consumer.Partitions(k.Topic) // set topic
